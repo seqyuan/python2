@@ -16,6 +16,6 @@ RUN apt-get update && \
 RUN conda create -n python2.7 python=2.7 
 # 激活Python 2.7环境
 SHELL ["conda", "run", "-n", "python2.7", "/bin/bash", "-c"]
-RUN conda install -y mamba
+#RUN conda install -y mamba
 
 CMD ["conda", "run", "-n", "python2.7", "/bin/bash"]
