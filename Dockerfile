@@ -13,9 +13,9 @@ RUN apt-get update && \
 		imagemagick \
 		wget
 
-RUN conda create -n python2 python=2.7 
+RUN conda create -n python2.7 python=2.7 
 # 激活Python 2.7环境
 SHELL ["conda", "run", "-n", "python2.7", "/bin/bash", "-c"]
-RUN conda install -y bamba
+RUN conda install -y mamba
 
 CMD ["conda", "run", "-n", "python2.7", "/bin/bash"]
